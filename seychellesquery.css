@@ -1,0 +1,443 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: comfortaa, Arial, Helvetica, sans-serif ;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+nav{
+  width: 100%;
+  height: 100px;
+  background: aquamarine;
+}
+
+nav .menu{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .menu a{
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  text-decoration: none;
+  font-family: comfortaa;
+  color: white;
+}
+
+label{
+  display: none;
+}
+
+/*Le drapeau et les armoiries*****************************************************************************/
+.drapeau{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  align-items: center;
+  padding-bottom: 8px;
+  padding-top: 10px;
+}
+
+.drapeau img{
+  height: 130px;
+}
+
+.intro p{
+  text-align: center;
+  color: #1f7b08;
+}
+
+/*Titre*****************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+.titre {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titre ul {
+  position: relative;
+  display: flex;
+}
+
+.titre li {
+  list-style: none;
+}
+
+.titre label {
+  position: relative;
+}
+
+.titre input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  z-index: 100;
+}
+
+.titre div {
+  position: relative;
+  height: 80px;
+  width: 80px;
+  background: #24252fe0;
+  color: #555;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 46px;
+  cursor: pointer;
+  margin: 0 4px;
+  border-radius: 20px;
+  box-shadow: -1px -1px 4px rgba(255, 255, 255, 0.05),
+    4px 4px 6px rgba(0, 0, 0, 0.2),
+    inset -1px -1px 4px rgba(255, 255, 255, 0.05),
+    inset 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.titre input[type="checkbox"]:checked ~ div {
+  box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05),
+    inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+  color: yellow;
+  text-shadow: 0 0 15px yellow, 0 0 25px yellow;
+  animation: glow 1.5s linear infinite;
+}
+
+@keyframes glow {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/*Titres des colonnes**************************************************************************/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 150vh;
+  grid-column-gap: 10px;
+  color: rgb(40, 35, 39);
+}
+
+.parent h1{
+  text-align: center;
+  font-weight: 50;
+}
+
+.container1 {
+  display: flex;
+  height: 15%;
+  align-items: center;
+}
+
+svg {
+  display: block;
+  font: 8.5em 'Montserrat';
+  width: 400px;
+  height: 100px;
+  margin-top: -80px;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+  stroke: #090b38;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+  stroke: #0a0a72;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  stroke: #312fcd;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: #53a7e3;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: #2a8708;
+  animation-delay: -5s;
+} 
+
+@keyframes stroke-offset{
+  100% {stroke-dashoffset: -35%;}
+}
+
+.parent section {
+  background-color: rgba(178, 248, 189, 0.3);
+  padding: 2% 4%;
+}
+
+.parent div {
+  column-width:calc(10px + 10vw);
+  padding-left:2.5%;
+  margin:0;
+}
+
+.géo div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.géo p, .sites p, .activités p{
+  margin-top: -50px;
+}
+
+.géo  img{
+  width: 80%;
+  border-radius: 20px;
+  border: 2px solid rgb(196, 243, 77);
+  margin-top: 20px;
+}
+
+:is(.sites, .activités) img{
+  width:100%;
+  margin:2% 1%;
+  border-radius: 20px;
+  border: 2px solid rgb(196, 243, 77);
+  margin-top: 20px;
+}
+
+.sites, .activités{
+  display: flex;
+  flex-direction: column;
+}
+
+section h1{
+  text-align: center;
+}
+
+main section p{
+  text-align: justify;
+  color: rgb(9, 89, 40);
+}
+
+/*Effets sur images***************************************************************************/
+.container {
+  display: flex;
+  width: 100%;
+  padding: 2.5% 2%;
+  box-sizing: border-box;
+  height: 360px;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { 
+  flex: 1 1 20%; 
+}
+
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+
+/*Boutons*******************************************************************************************************/
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(12, 131, 38);
+  background-image: linear-gradient(to top left,
+                                    rgba(0, 0, 0, .2),
+                                    rgba(0, 0, 0, .2) 30%,
+                                    rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+              inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.styled:hover {
+  background-color: rgb(11, 105, 31);
+}
+
+.styled:active {
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+              inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+/*Retour haut de page*********************************************************************************/
+.ancre{
+  display: flex;
+  justify-content: center;
+}
+
+label, #toggle{
+  display: none;
+}
+
+@media (min-width: 360px) and (max-width: 1050px){
+  header{
+    width: 100%;
+  }
+  nav{
+    height: 60px;
+    margin: 0;
+  }
+  nav .menu{
+    display: none;
+    flex-direction: column;
+    background: #05b2d5;
+    height: 180px;
+    margin: 0;
+    position: relative;
+  }
+  nav .menu a{
+    width: 60%;
+  }
+  label{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 10px;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  #toggle:checked + .menu{
+    display: flex;
+  }
+  .drapeau{
+    display: flex;
+    justify-content: center;
+  }
+
+  .drapeau img{
+    margin:0;
+    width: 30%;
+    height: auto;
+  }
+  .parent{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.3fr 2.5fr 2.1fr;
+    grid-row-gap: 30px;
+  }
+
+  .parent div{
+    padding-left: 0%;
+  }
+
+  .parent div img, button{
+    width: 80%;
+    min-width: 250px;
+  }
+
+  .géo, .sites, .activités{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 45vh!important;
+  }
+  .géo img{
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  :is(.géo, .sites, .activités) div{
+    width:min-content;
+  }
+  .géo p, .sites p, .activités p{
+    padding-top: 15px;
+    width: 320px;
+    height: 150px;
+    text-align: justify;
+    overflow: auto;
+  }
+
+  :is(.sites, .activités) div:last-child{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sites svg{
+    padding-top: 20px;
+  }
+  svg{
+    width: auto;
+  }
+
+  .titre ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 10px;
+    padding-top: 10px;
+  }
+
+  footer{
+    height: auto;
+    width: auto;
+    padding-top: 20%;
+  }
+
+  footer section:first-child{
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 3fr 1fr 2.5fr;
+  }
+
+  footer section:first-child div{
+    grid-column: 1 / 7;
+    grid-row-start: 3;
+  }
+
+  footer, footer section:last-child{
+    flex-direction: column;
+  }
+}
